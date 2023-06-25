@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    height: 425px;
+    width: 375px;
+    text-align: center;
+    border: thin solid black;
+}
+
+#top {
+    height: 15%;
+}
+
+#bottom {
+    height: 85%;
+}
+
+button {
+    height: 100%;
+    width: 100%;
+}
+
+#topRow,
+#middleTopRow,
+#middleBottomRow,
+#bottomRow {
+    display: flex;
+    height: 25%;
+}
