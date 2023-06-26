@@ -1,8 +1,9 @@
 const display = document.getElementById('display');
-let firstNumber = 0;
-let secondNumber = 0;
+const numberButtons = document.getElementsByClassName('numberButton');
+let firstNumber = null;
+let secondNumber = null;
 let operator = "";
-let solution = 0;
+let solution = null;
 
 function add(firstNumber, secondNumber) {
    let solution = (firstNumber + secondNumber);
@@ -42,3 +43,12 @@ function operate(firstNumber, operator, secondNumber) {
     }
 };
 
+for(i = 0; i < numberButtons.length; i++) {
+    numberButtons[i].addEventListener('click', (e) => {
+        if(display.textContent == '') {
+          display.textContent = e.target.textContent;
+        }else {
+          display.textContent = display.textContent.concat(e.target.textContent);
+        }
+    })
+}
